@@ -1,0 +1,151 @@
+/* Inventory Table Component Styles */
+
+.inventory-table-container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.table-header h2 {
+  color: #333;
+  font-size: 22px;
+}
+
+.refresh-btn {
+  background-color: #6c757d;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.refresh-btn:hover {
+  background-color: #5a6268;
+}
+
+.inventory-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.inventory-table thead {
+  background-color: #007bff;
+}
+
+.inventory-table th {
+  color: white;
+  padding: 15px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.inventory-table td {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.inventory-table tbody tr {
+  transition: background-color 0.3s;
+}
+
+.inventory-table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+.inventory-table tbody tr.low-stock {
+  background-color: #fff3cd;
+}
+
+.quantity-cell {
+  font-weight: 600;
+  color: #333;
+}
+
+.price-cell {
+  font-weight: 600;
+  color: #28a745;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge.in-stock {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.badge.low-stock {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.badge.out-of-stock {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.table-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.table-footer p {
+  color: #666;
+  font-size: 14px;
+}
+
+.table-footer p strong {
+  color: #333;
+  font-weight: 600;
+}
+
+.create-order-btn {
+  background-color: #ffc107;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.create-order-btn:hover {
+  background-color: #ffb800;
+}
+
+@media (max-width: 768px) {
+  .table-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .inventory-table {
+    font-size: 13px;
+  }
+  
+  .inventory-table th,
+  .inventory-table td {
+    padding: 10px;
+  }
+}

@@ -1,0 +1,306 @@
+/* Excel Inventory Table - Dark Mode with Neon */
+
+.inventory-table-container {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  box-shadow: 0 0 40px rgba(0, 255, 200, 0.2), inset 0 0 20px rgba(0, 255, 200, 0.05);
+  overflow: hidden;
+  margin: 25px 0;
+  border: 2px solid rgba(0, 255, 200, 0.3);
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  background: linear-gradient(135deg, #00d4ff 0%, #00ffc8 100%);
+  color: #0a0e27;
+  border-bottom: 3px solid #ff00ff;
+}
+
+.table-header h2 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.refresh-btn {
+  background: transparent;
+  border: 2px solid #00ffc8;
+  color: #00ffc8;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 0 20px rgba(0, 255, 200, 0.3);
+}
+
+.refresh-btn:hover {
+  background: #00ffc8;
+  color: #0a0e27;
+  transform: translateY(-3px);
+  box-shadow: 0 0 40px rgba(0, 255, 200, 0.8);
+}
+
+/* Search Section */
+.search-section {
+  padding: 25px;
+  background: rgba(0, 255, 200, 0.05);
+  border-bottom: 2px solid rgba(0, 255, 200, 0.2);
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid rgba(0, 255, 200, 0.3);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+  color: #e0e0e0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #00ffc8;
+  box-shadow: 0 0 30px rgba(0, 255, 200, 0.6), inset 0 0 10px rgba(0, 255, 200, 0.1);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.search-input::placeholder {
+  color: rgba(224, 224, 224, 0.5);
+}
+
+/* Table Styles */
+.inventory-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.inventory-table thead {
+  background: rgba(0, 255, 200, 0.1);
+  border-bottom: 2px solid rgba(0, 255, 200, 0.3);
+}
+
+.inventory-table th {
+  padding: 15px;
+  text-align: left;
+  font-weight: 800;
+  color: #00ffc8;
+  background: rgba(0, 255, 200, 0.05);
+  border-bottom: 2px solid #00ffc8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.inventory-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid rgba(0, 255, 200, 0.15);
+  font-size: 0.95rem;
+  color: #d0d0d0;
+}
+
+.inventory-table tbody tr {
+  transition: all 0.3s ease;
+}
+
+.inventory-table tbody tr:hover {
+  background-color: rgba(0, 255, 200, 0.08);
+  transform: scale(1.01);
+}
+
+.inventory-table tbody tr.low-stock {
+  background-color: rgba(255, 193, 7, 0.2);
+}
+
+/* Column Styles */
+.sr-no {
+  font-weight: bold;
+  text-align: center;
+  width: 60px;
+  background: rgba(102, 126, 234, 0.08);
+}
+
+.section {
+  text-align: center;
+  font-weight: 600;
+  background: rgba(102, 126, 234, 0.08);
+  color: #667eea;
+}
+
+.item-desc {
+  min-width: 200px;
+  color: #667eea;
+  font-weight: 600;
+}
+
+.item-type {
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.color {
+  text-transform: capitalize;
+  font-weight: 500;
+  color: #6c757d;
+}
+
+.qty-cell {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #667eea;
+}
+
+/* Action Buttons */
+.actions {
+  text-align: center;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.add-btn, .remove-btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 0.85rem;
+}
+
+.add-btn {
+  background: linear-gradient(135deg, #00ff64 0%, #00d084 100%);
+  color: #0a0e27;
+  box-shadow: 0 0 20px rgba(0, 255, 100, 0.4);
+}
+
+.add-btn:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 0 40px rgba(0, 255, 100, 0.8);
+}
+
+.remove-btn {
+  background: linear-gradient(135deg, #ff0080 0%, #ff3366 100%);
+  color: white;
+  box-shadow: 0 0 20px rgba(255, 0, 128, 0.4);
+}
+
+.remove-btn:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 0 40px rgba(255, 0, 128, 0.8);
+}
+
+.add-btn:disabled, .remove-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Table Footer */
+.table-footer {
+  padding: 25px;
+  background: rgba(0, 255, 200, 0.05);
+  border-top: 2px solid rgba(0, 255, 200, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.table-footer p {
+  margin: 0;
+  font-weight: 600;
+  color: #d0d0d0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.table-footer strong {
+  background: linear-gradient(135deg, #00ffc8 0%, #00d4ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.create-order-btn {
+  background: linear-gradient(135deg, #ff00ff 0%, #00d4ff 100%);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.create-order-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 50px rgba(0, 212, 255, 0.8);
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  font-size: 1.2rem;
+  color: #667eea;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #999;
+}
+
+.empty-state p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .table-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .inventory-table {
+    font-size: 0.85rem;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .add-btn, .remove-btn {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+  }
+}

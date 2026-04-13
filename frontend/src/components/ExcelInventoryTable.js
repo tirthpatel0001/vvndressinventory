@@ -1,26 +1,25 @@
-// Excel-Style Inventory Table Component
-// Displays inventory matching Excel structure: sr no., section, item desc, item type, color, qty
-
 import React, { useState } from 'react';
 import { inventoryAPI } from '../api';
 import ItemDetailsModal from './ItemDetailsModal';
 import '../styles/ExcelInventoryTable.css';
 
-function ExcelInventoryTable({ inventory, onRefresh, onNavigateToOrders }) {
+function ExcelInventoryTable({ inventory = [], onRefresh, onNavigateToOrders }) {
   const [searchTerm, setSearchTerm] = useState('');
   const [actionLoading, setActionLoading] = useState(null);
   const [selectedItem, setSelectedItem] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
 
-  // Filter inventory based on search
-  const filteredInventory = inventory.filter(item => {
-    const searchLower = searchTerm.toLowerCase();
-    return (
-      item.name?.toLowerCase().includes(searchLower) ||
-      item.category?.toLowerCase().includes(searchLower) ||
-      item.color?.toLowerCase().includes(searchLower)
-    );
-  });
+  // 🔥 SAFE FILTER (VERY IMPORTANT FIX)
+  const filteredInventory = Array.isArray(inventory)
+    ? inventory.filter(item => {
+        const searchLower = searchTerm.toLowerCase();
+        return (
+          item?.name?.toLowerCase().includes(searchLower) ||
+          item?.category?.toLowerCase().includes(searchLower) ||
+          item?.color?.toLowerCase().includes(searchLower)
+        );
+      })
+    : [];
 
   const handleAddQuantity = async (itemId) => {
     const qty = prompt('Enter quantity to add:');
@@ -86,6 +85,11 @@ function ExcelInventoryTable({ inventory, onRefresh, onNavigateToOrders }) {
         />
       </div>
 
+      {/* 🔥 IMPORTANT DEBUG */}
+      {inventory.length === 0 && (
+        <p style={{ color: "yellow" }}>⚠️ No data received from API</p>
+      )}
+
       <table className="inventory-table excel-table">
         <thead>
           <tr>
@@ -100,48 +104,30 @@ function ExcelInventoryTable({ inventory, onRefresh, onNavigateToOrders }) {
         </thead>
         <tbody>
           {filteredInventory.map((item, index) => (
-            <tr key={item._id} className={item.quantity <= 5 ? 'low-stock' : ''}>
-              <td className="sr-no">{index + 1}</td>
-              <td className="section">{item.section}</td>
-              <td className="item-desc">
-                <button 
-                  className="item-desc-btn"
-                  onClick={() => openItemDetails(item)}
-                  title="Click to view details"
-                >
-                  <strong>{item.name}</strong>
+            <tr key={item._id}>
+              <td>{index + 1}</td>
+              <td>{item.section}</td>
+              <td>
+                <button onClick={() => openItemDetails(item)}>
+                  {item.name}
                 </button>
               </td>
-              <td className="item-type">{item.category}</td>
-              <td className="color">{item.color}</td>
-              <td className="qty-cell">{item.quantity}</td>
-              <td className="actions">
-                <button
-                  className="add-btn"
-                  onClick={() => handleAddQuantity(item._id)}
-                  disabled={actionLoading === item._id}
-                  title="Add quantity"
-                >
-                  ➕ Add
-                </button>
-                <button
-                  className="remove-btn"
-                  onClick={() => handleRemoveQuantity(item._id)}
-                  disabled={actionLoading === item._id}
-                  title="Remove quantity"
-                >
-                  ➖ Remove
-                </button>
+              <td>{item.category}</td>
+              <td>{item.color}</td>
+              <td>{item.quantity}</td>
+              <td>
+                <button onClick={() => handleAddQuantity(item._id)}>➕</button>
+                <button onClick={() => handleRemoveQuantity(item._id)}>➖</button>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
 
-      <div className="table-footer">
-        <p>Total Items: <strong>{filteredInventory.length}</strong> / {inventory.length}</p>
-        <p>Total Quantity: <strong>{filteredInventory.reduce((sum, item) => sum + item.quantity, 0)}</strong> units</p>
-        <button onClick={onNavigateToOrders} className="create-order-btn">
+      <div>
+        <p>Total Items: {filteredInventory.length}</p>
+        <p>Total Quantity: {filteredInventory.reduce((sum, item) => sum + item.quantity, 0)}</p>
+        <button onClick={onNavigateToOrders}>
           📋 Create Order
         </button>
       </div>

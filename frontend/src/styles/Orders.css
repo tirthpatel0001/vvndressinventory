@@ -9,16 +9,16 @@
 }
 
 .orders-header {
-  background: linear-gradient(90deg, #00d4ff 0%, #00ffc8 100%);
-  color: #0a0e27;
+  background: linear-gradient(90deg, #9D4EDD 0%, #FF006E 100%);
+  color: #fff;
   padding: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 0 60px rgba(0, 212, 255, 0.7), 0 0 40px rgba(0, 255, 200, 0.5);
+  box-shadow: 0 0 60px rgba(157, 78, 221, 0.7), 0 0 40px rgba(255, 0, 110, 0.5);
   flex-wrap: wrap;
   gap: 30px;
-  border-bottom: 4px solid #00ff64;
+  border-bottom: 4px solid #00FFFF;
 }
 
 .orders-header h1 {
@@ -27,8 +27,8 @@
   font-weight: 900;
   letter-spacing: 2px;
   font-family: 'Poppins', sans-serif;
-  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  color: #0a0e27;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  color: #fff;
 }
 
 .orders-header p {
@@ -37,7 +37,7 @@
   font-weight: 600;
   letter-spacing: 0.8px;
   font-family: 'Poppins', sans-serif;
-  color: #0a0e27;
+  color: #fff;
 }
 
 .header-buttons {
@@ -105,8 +105,8 @@
 }
 
 .toggle-form-btn {
-  background: linear-gradient(135deg, #00ffc8 0%, #00d4ff 100%);
-  color: #0a0e27;
+  background: linear-gradient(135deg, #FF006E 0%, #FF1493 100%);
+  color: #fff;
   padding: 14px 32px;
   border: none;
   border-radius: 10px;
@@ -115,7 +115,7 @@
   margin-bottom: 20px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 0 30px rgba(0, 255, 200, 0.6);
+  box-shadow: 0 0 30px rgba(255, 0, 110, 0.6);
   text-transform: uppercase;
   letter-spacing: 1px;
   font-family: 'Poppins', sans-serif;
@@ -123,7 +123,7 @@
 
 .toggle-form-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 0 50px rgba(0, 255, 200, 1);
+  box-shadow: 0 0 50px rgba(255, 0, 110, 1);
 }
 
 .loading {

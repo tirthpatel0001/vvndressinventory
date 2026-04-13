@@ -22,7 +22,7 @@
 }
 
 .login-box h1 {
-  background: linear-gradient(90deg, #00ffc8 0%, #00d4ff 100%);
+  background: linear-gradient(90deg, #FF006E 0%, #FF1493 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -32,7 +32,7 @@
 }
 
 .login-box h2 {
-  color: #00d4ff;
+  color: #00FFFF;
   margin-bottom: 30px;
   font-size: 20px;
   font-weight: 600;
@@ -54,7 +54,7 @@
 .form-group label {
   display: block;
   margin-bottom: 8px;
-  color: #00ffc8;
+  color: #FF006E;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -82,8 +82,8 @@
 .login-btn {
   width: 100%;
   padding: 12px;
-  background: linear-gradient(135deg, #00ffc8 0%, #00d4ff 100%);
-  color: #0a0e27;
+  background: linear-gradient(135deg, #FF006E 0%, #FF1493 100%);
+  color: #fff;
   border: none;
   border-radius: 8px;
   font-size: 16px;
@@ -92,12 +92,12 @@
   transition: all 0.35s ease;
   text-transform: uppercase;
   letter-spacing: 1px;
-  box-shadow: 0 0 25px rgba(0, 255, 200, 0.5);
+  box-shadow: 0 0 25px rgba(255, 0, 110, 0.5);
 }
 
 .login-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 0 50px rgba(0, 255, 200, 1), inset 0 0 20px rgba(0, 255, 200, 0.3);
+  box-shadow: 0 0 50px rgba(255, 0, 110, 1), inset 0 0 20px rgba(255, 0, 110, 0.3);
 }
 
 .demo-credentials {
@@ -114,7 +114,7 @@
 }
 
 .demo-credentials strong {
-  color: #00ffc8;
+  color: #FF006E;
   font-weight: 700;
 }
 

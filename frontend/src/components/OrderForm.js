@@ -77,12 +77,24 @@ function OrderForm({ inventory, onOrderCreated, onCancel }) {
 
     try {
       setLoading(true);
-      await orderAPI.create({ items: selectedItems, customerName });
+      console.log('Creating order with:', { items: selectedItems, customerName });
+      const response = await orderAPI.create({ items: selectedItems, customerName });
+      console.log('Order created successfully:', response.data);
       alert('✅ Order created successfully!');
       onOrderCreated();
     } catch (error) {
-      console.error('Error creating order:', error);
-      alert(error.response?.data?.message || 'Failed to create order');
+      console.error('Full error details:', error);
+      console.error('Error response:', error.response);
+      
+      let errorMessage = 'Failed to create order';
+      
+      if (error.response?.data?.message) {
+        errorMessage = error.response.data.message;
+      } else if (error.message) {
+        errorMessage = error.message;
+      }
+      
+      alert(`❌ Error: ${errorMessage}`);
     } finally {
       setLoading(false);
     }

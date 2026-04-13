@@ -11,14 +11,37 @@ function ExcelInventoryTable({ inventory = [], onRefresh, onNavigateToOrders }) 
 
   // 🔥 SAFE FILTER (VERY IMPORTANT FIX)
   const filteredInventory = Array.isArray(inventory)
-    ? inventory.filter(item => {
-        const searchLower = searchTerm.toLowerCase();
-        return (
-          item?.name?.toLowerCase().includes(searchLower) ||
-          item?.category?.toLowerCase().includes(searchLower) ||
-          item?.color?.toLowerCase().includes(searchLower)
-        );
-      })
+    ? inventory
+        .filter(item => {
+          const searchLower = searchTerm.toLowerCase();
+          return (
+            item?.name?.toLowerCase().includes(searchLower) ||
+            item?.category?.toLowerCase().includes(searchLower) ||
+            item?.color?.toLowerCase().includes(searchLower)
+          );
+        })
+        .sort((a, b) => {
+          // Sort by section (e.g., 1/1, 1/2, 2/1, 2/2)
+          const sectionA = a.section || '';
+          const sectionB = b.section || '';
+          
+          const parseSection = (section) => {
+            const parts = section.split('/');
+            return {
+              first: parseInt(parts[0]) || 0,
+              second: parseInt(parts[1]) || 0
+            };
+          };
+          
+          const parsedA = parseSection(sectionA);
+          const parsedB = parseSection(sectionB);
+          
+          // Sort by first number, then by second number
+          if (parsedA.first !== parsedB.first) {
+            return parsedA.first - parsedB.first;
+          }
+          return parsedA.second - parsedB.second;
+        })
     : [];
 
   const handleAddQuantity = async (itemId) => {

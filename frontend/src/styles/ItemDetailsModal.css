@@ -27,9 +27,9 @@
 .modal-content {
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(20px);
-  border: 2px solid rgba(0, 255, 200, 0.4);
+  border: 2px solid rgba(255, 0, 110, 0.4);
   border-radius: 15px;
-  box-shadow: 0 0 60px rgba(0, 255, 200, 0.4), inset 0 0 30px rgba(0, 255, 200, 0.1);
+  box-shadow: 0 0 60px rgba(255, 0, 110, 0.4), inset 0 0 30px rgba(255, 0, 110, 0.1);
   max-width: 500px;
   width: 100%;
   max-height: 90vh;
@@ -53,14 +53,14 @@
   justify-content: space-between;
   align-items: center;
   padding: 25px;
-  background: linear-gradient(135deg, #00d4ff 0%, #00ffc8 100%);
-  border-bottom: 2px solid rgba(0, 255, 200, 0.3);
+  background: linear-gradient(135deg, #FF006E 0%, #FF1493 100%);
+  border-bottom: 2px solid rgba(255, 0, 110, 0.3);
   border-radius: 13px 13px 0 0;
 }
 
 .modal-header h2 {
   margin: 0;
-  color: #0a0e27;
+  color: #fff;
   font-size: 1.8rem;
   font-weight: 800;
   font-family: 'Poppins', sans-serif;
@@ -69,7 +69,7 @@
 .modal-close {
   background: rgba(255, 255, 255, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  color: #0a0e27;
+  color: #fff;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -95,7 +95,7 @@
 .detail-row label {
   display: block;
   font-weight: 700;
-  background: linear-gradient(90deg, #00ffc8 0%, #00d4ff 100%);
+  background: linear-gradient(90deg, #FF006E 0%, #FF1493 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -111,8 +111,8 @@
   color: #e0e0e0;
   font-size: 1.1rem;
   padding: 12px 15px;
-  background: rgba(0, 255, 200, 0.05);
-  border-left: 3px solid #00ffc8;
+  background: rgba(255, 0, 110, 0.05);
+  border-left: 3px solid #FF006E;
   border-radius: 5px;
   font-weight: 500;
 }
@@ -133,8 +133,8 @@
   display: flex;
   gap: 12px;
   padding: 20px 30px;
-  background: rgba(0, 255, 200, 0.05);
-  border-top: 2px solid rgba(0, 255, 200, 0.2);
+  background: rgba(255, 0, 110, 0.05);
+  border-top: 2px solid rgba(255, 0, 110, 0.2);
   border-radius: 0 0 13px 13px;
   flex-wrap: wrap;
 }
@@ -155,14 +155,14 @@
 }
 
 .btn-add {
-  background: linear-gradient(135deg, #00ffc8 0%, #00d4ff 100%);
-  color: #0a0e27;
-  box-shadow: 0 0 25px rgba(0, 255, 200, 0.4);
+  background: linear-gradient(135deg, #FF006E 0%, #FF1493 100%);
+  color: #fff;
+  box-shadow: 0 0 25px rgba(255, 0, 110, 0.4);
 }
 
 .btn-add:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 0 40px rgba(0, 255, 200, 0.8);
+  box-shadow: 0 0 40px rgba(255, 0, 110, 0.8);
 }
 
 .btn-remove {

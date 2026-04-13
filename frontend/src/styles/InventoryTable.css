@@ -5,8 +5,8 @@
   backdrop-filter: blur(15px);
   padding: 30px;
   border-radius: 15px;
-  box-shadow: 0 0 40px rgba(0, 212, 255, 0.2), inset 0 0 20px rgba(0, 212, 255, 0.05);
-  border: 2px solid rgba(0, 212, 255, 0.3);
+  box-shadow: 0 0 40px rgba(255, 0, 110, 0.2), inset 0 0 20px rgba(255, 0, 110, 0.05);
+  border: 2px solid rgba(255, 0, 110, 0.3);
 }
 
 .table-header {
@@ -19,26 +19,26 @@
 }
 
 .table-header h2 {
-  color: #00ffc8;
+  color: #FF006E;
   font-size: 22px;
   font-weight: 800;
 }
 
 .refresh-btn {
-  background: rgba(0, 212, 255, 0.2);
-  border: 2px solid #00ffc8;
-  color: #00ffc8;
+  background: rgba(255, 0, 110, 0.2);
+  border: 2px solid #FF006E;
+  color: #FF006E;
   padding: 10px 20px;
   border-radius: 8px;
   font-weight: 700;
   transition: all 0.3s;
-  box-shadow: 0 0 15px rgba(0, 255, 200, 0.3);
+  box-shadow: 0 0 15px rgba(255, 0, 110, 0.3);
 }
 
 .refresh-btn:hover {
-  background: #00ffc8;
-  color: #0a0e27;
-  box-shadow: 0 0 30px rgba(0, 255, 200, 0.8);
+  background: #FF006E;
+  color: #fff;
+  box-shadow: 0 0 30px rgba(255, 0, 110, 0.8);
 }
 
 .inventory-table {
@@ -48,22 +48,22 @@
 }
 
 .inventory-table thead {
-  background: linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(0, 255, 200, 0.1));
+  background: linear-gradient(135deg, rgba(255, 0, 110, 0.15), rgba(157, 78, 221, 0.1));
 }
 
 .inventory-table th {
-  color: #00ffc8;
+  color: #FF006E;
   padding: 15px;
   text-align: left;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.8px;
-  background: rgba(0, 255, 200, 0.05);
+  background: rgba(255, 0, 110, 0.05);
 }
 
 .inventory-table td {
   padding: 15px;
-  border-bottom: 1px solid rgba(0, 255, 200, 0.1);
+  border-bottom: 1px solid rgba(255, 0, 110, 0.1);
   color: #d0d0d0;
 }
 
@@ -72,7 +72,7 @@
 }
 
 .inventory-table tbody tr:hover {
-  background-color: rgba(0, 255, 200, 0.08);
+  background-color: rgba(255, 0, 110, 0.08);
 }
 
 .inventory-table tbody tr.low-stock {
@@ -133,17 +133,17 @@
 }
 
 .create-order-btn {
-  background: linear-gradient(135deg, #ffa500 0%, #ff8c00 100%);
+  background: linear-gradient(135deg, #FF006E 0%, #FF1493 100%);
   color: #fff;
   padding: 10px 20px;
   border-radius: 8px;
   font-weight: 700;
   transition: all 0.3s;
-  box-shadow: 0 0 20px rgba(255, 165, 0, 0.5);
+  box-shadow: 0 0 20px rgba(255, 0, 110, 0.5);
 }
 
 .create-order-btn:hover {
-  box-shadow: 0 0 40px rgba(255, 165, 0, 0.8);
+  box-shadow: 0 0 40px rgba(255, 0, 110, 0.8);
   transform: translateY(-2px);
 }
 

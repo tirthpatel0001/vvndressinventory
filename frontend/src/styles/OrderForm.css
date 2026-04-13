@@ -5,13 +5,13 @@
   backdrop-filter: blur(15px);
   padding: 40px;
   border-radius: 15px;
-  box-shadow: 0 0 40px rgba(0, 255, 200, 0.2), inset 0 0 20px rgba(0, 255, 200, 0.05);
+  box-shadow: 0 0 40px rgba(255, 0, 110, 0.2), inset 0 0 20px rgba(255, 0, 110, 0.05);
   margin-bottom: 35px;
-  border: 2px solid rgba(0, 255, 200, 0.3);
+  border: 2px solid rgba(255, 0, 110, 0.3);
 }
 
 .order-form-container form h3 {
-  background: linear-gradient(135deg, #00ffc8 0%, #00d4ff 100%);
+  background: linear-gradient(135deg, #FF006E 0%, #FF1493 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -26,7 +26,7 @@
 .customer-section {
   margin-bottom: 30px;
   padding-bottom: 25px;
-  border-bottom: 2px solid rgba(0, 255, 200, 0.2);
+  border-bottom: 2px solid rgba(255, 0, 110, 0.2);
 }
 
 .customer-section .form-group {
@@ -36,7 +36,7 @@
 
 .customer-section label {
   font-weight: 700;
-  background: linear-gradient(90deg, #00ffc8 0%, #00d4ff 100%);
+  background: linear-gradient(90deg, #FF006E 0%, #FF1493 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -49,7 +49,7 @@
 
 .customer-section input {
   padding: 14px 18px;
-  border: 2px solid rgba(0, 255, 200, 0.3);
+  border: 2px solid rgba(255, 0, 110, 0.3);
   border-radius: 8px;
   font-size: 1rem;
   transition: all 0.3s ease;
@@ -60,8 +60,8 @@
 
 .customer-section input:focus {
   outline: none;
-  border-color: #00ffc8;
-  box-shadow: 0 0 30px rgba(0, 255, 200, 0.6), inset 0 0 15px rgba(0, 255, 200, 0.1);
+  border-color: #FF006E;
+  box-shadow: 0 0 30px rgba(255, 0, 110, 0.6), inset 0 0 15px rgba(255, 0, 110, 0.1);
   background: rgba(255, 255, 255, 0.08);
 }
 
@@ -73,13 +73,13 @@
 .filter-section {
   margin-bottom: 30px;
   padding: 25px;
-  background: rgba(0, 255, 200, 0.05);
+  background: rgba(255, 0, 110, 0.05);
   border-radius: 10px;
-  border: 2px solid rgba(0, 255, 200, 0.2);
+  border: 2px solid rgba(255, 0, 110, 0.2);
 }
 
 .filter-section h4 {
-  color: #00ffc8;
+  color: #FF006E;
   margin-top: 0;
   margin-bottom: 20px;
   text-transform: uppercase;
@@ -101,7 +101,7 @@
 
 .filter-group label {
   font-weight: 700;
-  background: linear-gradient(90deg, #00ffc8 0%, #00d4ff 100%);
+  background: linear-gradient(90deg, #FF006E 0%, #FF1493 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -114,7 +114,7 @@
 
 .filter-group select {
   padding: 12px 14px;
-  border: 2px solid rgba(0, 255, 200, 0.3);
+  border: 2px solid rgba(255, 0, 110, 0.3);
   border-radius: 8px;
   font-size: 0.95rem;
   transition: all 0.3s ease;
@@ -125,8 +125,8 @@
 
 .filter-group select:focus {
   outline: none;
-  border-color: #00ffc8;
-  box-shadow: 0 0 25px rgba(0, 255, 200, 0.5), inset 0 0 10px rgba(0, 255, 200, 0.1);
+  border-color: #FF006E;
+  box-shadow: 0 0 25px rgba(255, 0, 110, 0.5), inset 0 0 10px rgba(255, 0, 110, 0.1);
   background: rgba(255, 255, 255, 0.08);
 }
 
@@ -144,31 +144,31 @@
 }
 
 .order-items-table th {
-  background: linear-gradient(135deg, #00ffc8 0%, #00d4ff 100%);
-  color: #0a0e27;
+  background: linear-gradient(135deg, #FF006E 0%, #FF1493 100%);
+  color: #fff;
   padding: 14px;
   text-align: left;
   font-weight: 700;
-  border-bottom: 3px solid #00ffc8;
+  border-bottom: 3px solid #FF006E;
   font-family: 'Poppins', sans-serif;
 }
 
 .order-items-table td {
   padding: 14px;
-  border-bottom: 1px solid rgba(0, 255, 200, 0.15);
+  border-bottom: 1px solid rgba(255, 0, 110, 0.15);
   background: rgba(255, 255, 255, 0.02);
   color: #d0d0d0;
 }
 
 .order-items-table tr:hover {
-  background: rgba(0, 255, 200, 0.05);
+  background: rgba(255, 0, 110, 0.05);
 }
 
 .order-items-table select,
 .order-items-table input {
   width: 100%;
   padding: 10px 12px;
-  border: 2px solid rgba(0, 255, 200, 0.3);
+  border: 2px solid rgba(255, 0, 110, 0.3);
   border-radius: 6px;
   font-size: 0.95rem;
   transition: all 0.3s ease;
@@ -180,14 +180,14 @@
 .order-items-table select:focus,
 .order-items-table input:focus {
   outline: none;
-  border-color: #00ffc8;
-  box-shadow: 0 0 20px rgba(0, 255, 200, 0.5);
+  border-color: #FF006E;
+  box-shadow: 0 0 20px rgba(255, 0, 110, 0.5);
   background: rgba(255, 255, 255, 0.08);
 }
 
 .stock-cell {
   font-weight: 700;
-  color: #00ffc8;
+  color: #FF006E;
   text-align: center;
 }
 
@@ -228,20 +228,20 @@
 
 /* Order Summary */
 .order-summary {
-  background: rgba(102, 126, 234, 0.08);
+  background: rgba(255, 0, 110, 0.08);
   padding: 25px;
   border-radius: 10px;
-  border: 2px solid rgba(102, 126, 234, 0.2);
+  border: 2px solid rgba(255, 0, 110, 0.2);
 }
 
 .total-section {
   margin-bottom: 20px;
   padding-bottom: 15px;
-  border-bottom: 2px solid rgba(102, 126, 234, 0.2);
+  border-bottom: 2px solid rgba(255, 0, 110, 0.2);
 }
 
 .total-section h4 {
-  color: #667eea;
+  color: #FF006E;
   margin: 0 0 8px 0;
   font-weight: 700;
   font-size: 1.2rem;
@@ -271,14 +271,14 @@
 }
 
 .create-btn {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #FF006E 0%, #FF1493 100%);
   color: white;
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 4px 15px rgba(255, 0, 110, 0.4);
 }
 
 .create-btn:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+  box-shadow: 0 8px 25px rgba(255, 0, 110, 0.6);
 }
 
 .create-btn:disabled {

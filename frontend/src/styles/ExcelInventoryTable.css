@@ -4,10 +4,10 @@
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(15px);
   border-radius: 15px;
-  box-shadow: 0 0 40px rgba(0, 255, 200, 0.2), inset 0 0 20px rgba(0, 255, 200, 0.05);
+  box-shadow: 0 0 40px rgba(255, 0, 110, 0.2), inset 0 0 20px rgba(255, 0, 110, 0.05);
   overflow: hidden;
   margin: 25px 0;
-  border: 2px solid rgba(0, 255, 200, 0.3);
+  border: 2px solid rgba(255, 0, 110, 0.3);
 }
 
 .table-header {
@@ -15,9 +15,9 @@
   justify-content: space-between;
   align-items: center;
   padding: 30px;
-  background: linear-gradient(135deg, #00d4ff 0%, #00ffc8 100%);
-  color: #0a0e27;
-  border-bottom: 3px solid #00ff64;
+  background: linear-gradient(135deg, #9D4EDD 0%, #FF006E 100%);
+  color: #fff;
+  border-bottom: 3px solid #00FFFF;
 }
 
 .table-header h2 {
@@ -26,12 +26,13 @@
   font-weight: 800;
   letter-spacing: 1px;
   font-family: 'Poppins', sans-serif;
+  color: #fff;
 }
 
 .refresh-btn {
   background: transparent;
-  border: 2px solid #00ffc8;
-  color: #00ffc8;
+  border: 2px solid #00FFFF;
+  color: #00FFFF;
   padding: 12px 24px;
   border-radius: 8px;
   cursor: pointer;
@@ -40,27 +41,27 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   font-family: 'Poppins', sans-serif;
-  box-shadow: 0 0 20px rgba(0, 255, 200, 0.3);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
 }
 
 .refresh-btn:hover {
-  background: #00ffc8;
-  color: #0a0e27;
+  background: #00FFFF;
+  color: #000;
   transform: translateY(-3px);
-  box-shadow: 0 0 40px rgba(0, 255, 200, 0.8);
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.8);
 }
 
 /* Search Section */
 .search-section {
   padding: 25px;
-  background: rgba(0, 255, 200, 0.05);
-  border-bottom: 2px solid rgba(0, 255, 200, 0.2);
+  background: rgba(255, 0, 110, 0.05);
+  border-bottom: 2px solid rgba(255, 0, 110, 0.2);
 }
 
 .search-input {
   width: 100%;
   padding: 12px 15px;
-  border: 2px solid rgba(0, 255, 200, 0.3);
+  border: 2px solid rgba(255, 0, 110, 0.3);
   border-radius: 8px;
   font-size: 1rem;
   transition: all 0.3s ease;
@@ -71,8 +72,8 @@
 
 .search-input:focus {
   outline: none;
-  border-color: #00ffc8;
-  box-shadow: 0 0 30px rgba(0, 255, 200, 0.6), inset 0 0 10px rgba(0, 255, 200, 0.1);
+  border-color: #FF006E;
+  box-shadow: 0 0 30px rgba(255, 0, 110, 0.6), inset 0 0 10px rgba(255, 0, 110, 0.1);
   background: rgba(255, 255, 255, 0.08);
 }
 
@@ -87,17 +88,17 @@
 }
 
 .inventory-table thead {
-  background: rgba(0, 255, 200, 0.1);
-  border-bottom: 2px solid rgba(0, 255, 200, 0.3);
+  background: rgba(255, 0, 110, 0.1);
+  border-bottom: 2px solid rgba(255, 0, 110, 0.3);
 }
 
 .inventory-table th {
   padding: 15px;
   text-align: left;
   font-weight: 800;
-  color: #00ffc8;
-  background: rgba(0, 255, 200, 0.05);
-  border-bottom: 2px solid #00ffc8;
+  color: #FF006E;
+  background: rgba(255, 0, 110, 0.05);
+  border-bottom: 2px solid #FF006E;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 12px;
@@ -124,15 +125,15 @@
   font-weight: bold;
   text-align: center;
   width: 60px;
-  background: rgba(0, 255, 200, 0.05);
-  color: #00ffc8;
+  background: rgba(255, 0, 110, 0.05);
+  color: #FF006E;
 }
 
 .section {
   text-align: center;
   font-weight: 700;
-  background: rgba(0, 212, 255, 0.05);
-  color: #00d4ff;
+  background: rgba(255, 0, 110, 0.05);
+  color: #FF006E;
 }
 
 .item-desc {
@@ -145,7 +146,7 @@
 .item-desc-btn {
   background: none;
   border: none;
-  color: #00ffc8;
+  color: #FF006E;
   cursor: pointer;
   font-weight: 700;
   text-align: left;
@@ -155,15 +156,15 @@
   font-size: 0.95rem;
   font-family: 'Poppins', sans-serif;
   text-decoration: underline;
-  text-decoration-color: #00ffc8;
+  text-decoration-color: #FF006E;
   text-underline-offset: 3px;
 }
 
 .item-desc-btn:hover {
   text-decoration-thickness: 2px;
-  color: #00d4ff;
-  text-decoration-color: #00d4ff;
-  text-shadow: 0 0 10px rgba(0, 255, 200, 0.5);
+  color: #FF1493;
+  text-decoration-color: #FF1493;
+  text-shadow: 0 0 10px rgba(255, 0, 110, 0.5);
 }
 
 .item-type {
@@ -182,7 +183,7 @@
   text-align: center;
   font-weight: 800;
   font-size: 1.1rem;
-  color: #00ff64;
+  color: #FF006E;
 }
 
 /* Action Buttons */
@@ -204,14 +205,14 @@
 }
 
 .add-btn {
-  background: linear-gradient(135deg, #00ff64 0%, #00d084 100%);
-  color: #0a0e27;
-  box-shadow: 0 0 20px rgba(0, 255, 100, 0.4);
+  background: linear-gradient(135deg, #FF006E 0%, #FF1493 100%);
+  color: #fff;
+  box-shadow: 0 0 20px rgba(255, 0, 110, 0.4);
 }
 
 .add-btn:hover:not(:disabled) {
   transform: translateY(-3px);
-  box-shadow: 0 0 40px rgba(0, 255, 100, 0.8);
+  box-shadow: 0 0 40px rgba(255, 0, 110, 0.8);
 }
 
 .remove-btn {
@@ -233,8 +234,8 @@
 /* Table Footer */
 .table-footer {
   padding: 25px;
-  background: rgba(0, 255, 200, 0.05);
-  border-top: 2px solid rgba(0, 255, 200, 0.2);
+  background: rgba(255, 0, 110, 0.05);
+  border-top: 2px solid rgba(255, 0, 110, 0.2);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -250,7 +251,7 @@
 }
 
 .table-footer strong {
-  background: linear-gradient(135deg, #00ffc8 0%, #00d4ff 100%);
+  background: linear-gradient(135deg, #FF006E 0%, #FF1493 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -259,7 +260,7 @@
 }
 
 .create-order-btn {
-  background: linear-gradient(135deg, #ff00ff 0%, #00d4ff 100%);
+  background: linear-gradient(135deg, #FF006E 0%, #FF1493 100%);
   color: white;
   border: none;
   padding: 14px 28px;
@@ -267,7 +268,7 @@
   cursor: pointer;
   font-weight: 700;
   transition: all 0.3s ease;
-  box-shadow: 0 0 30px rgba(0, 212, 255, 0.4);
+  box-shadow: 0 0 30px rgba(255, 0, 110, 0.4);
   text-transform: uppercase;
   letter-spacing: 1px;
   font-family: 'Poppins', sans-serif;
@@ -275,7 +276,7 @@
 
 .create-order-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 0 50px rgba(0, 212, 255, 0.8);
+  box-shadow: 0 0 50px rgba(255, 0, 110, 0.8);
 }
 
 .loading {
@@ -339,112 +340,121 @@
   .inventory-table {
     font-size: 0.85rem;
     display: block;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    width: 100%;
   }
 
   .inventory-table thead {
-    display: block;
-  }
-
-  .inventory-table th {
-    padding: 12px 10px;
-    font-size: 0.75rem;
-    border-bottom: 2px solid #00ffc8;
-    word-break: break-word;
+    display: none;
   }
 
   .inventory-table tbody {
     display: block;
+    width: 100%;
   }
 
   .inventory-table tbody tr {
-    display: flex;
-    flex-wrap: wrap;
-    border-bottom: 2px solid rgba(0, 255, 200, 0.2);
-    margin-bottom: 10px;
-    padding: 10px;
-    background: rgba(0, 255, 200, 0.02);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    border: 2px solid rgba(255, 0, 110, 0.3);
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 15px;
+    background: rgba(255, 0, 110, 0.03);
+    align-items: start;
   }
 
   .inventory-table tbody tr:hover {
-    background-color: rgba(0, 255, 200, 0.08);
+    background-color: rgba(255, 0, 110, 0.08);
     transform: none;
   }
 
   .inventory-table td {
-    flex: 0 0 100%;
+    border: none;
     padding: 8px 0;
-    border-bottom: none;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    word-break: break-word;
   }
 
   .inventory-table td::before {
     content: attr(data-label);
     font-weight: 700;
-    color: #00ffc8;
-    margin-right: 10px;
+    color: #FF006E;
+    margin-bottom: 4px;
     text-transform: uppercase;
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     letter-spacing: 0.5px;
-    flex-basis: 35%;
   }
 
   .sr-no {
-    flex: 0 0 100%;
+    grid-column: 1 / -1;
     text-align: center;
-    background: rgba(0, 255, 200, 0.1);
-    padding: 8px !important;
+    background: rgba(255, 0, 110, 0.1);
+    padding: 10px !important;
     font-size: 1rem;
+    font-weight: bold;
+    color: #FF006E;
+    border-radius: 6px;
   }
 
   .sr-no::before {
-    content: none;
+    content: "S.No";
   }
 
   .section {
-    flex: 0 0 100%;
     text-align: left;
   }
 
+  .section::before {
+    content: "Section";
+  }
+
   .item-desc {
-    flex: 0 0 100%;
+    grid-column: 1 / -1;
+  }
+
+  .item-desc::before {
+    content: "Item Description";
   }
 
   .item-desc-btn {
-    padding: 8px 0;
+    padding: 8px;
     width: 100%;
     text-decoration-thickness: 1px;
+    text-align: left;
+    color: #FF006E;
   }
 
-  .item-type {
-    flex: 0 0 50%;
+  .item-type::before {
+    content: "Category";
   }
 
-  .color {
-    flex: 0 0 50%;
+  .color::before {
+    content: "Color";
   }
 
   .qty-cell {
-    flex: 0 0 100%;
-    justify-content: flex-start;
+    text-align: center;
+  }
+
+  .qty-cell::before {
+    content: "Quantity";
   }
 
   .actions {
-    flex: 0 0 100%;
+    grid-column: 1 / -1;
+    display: flex;
     flex-direction: row;
     gap: 8px;
     justify-content: center;
-    margin-top: 8px;
   }
 
   .add-btn, .remove-btn {
     padding: 8px 12px;
     font-size: 0.8rem;
     flex: 1;
-    min-width: 80px;
+    min-width: 70px;
   }
 
   .table-footer {
@@ -474,42 +484,58 @@
     font-size: 1.3rem;
   }
 
-  .inventory-table th {
-    padding: 10px 8px;
-    font-size: 0.65rem;
+  .search-input {
+    font-size: 16px;
+    padding: 10px;
   }
 
   .inventory-table tbody tr {
-    padding: 8px;
-    margin-bottom: 8px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    border: 2px solid rgba(255, 0, 110, 0.3);
+    border-radius: 8px;
+    margin-bottom: 12px;
+    padding: 12px;
+    background: rgba(255, 0, 110, 0.03);
   }
 
   .inventory-table td {
-    font-size: 0.85rem;
+    padding: 6px 0;
   }
 
   .inventory-table td::before {
-    font-size: 0.65rem;
-    flex-basis: 40%;
+    font-size: 0.6rem;
+    margin-bottom: 3px;
   }
 
-  .item-type {
-    flex: 0 0 100%;
+  .sr-no {
+    font-size: 0.95rem;
+    padding: 8px !important;
   }
 
-  .color {
-    flex: 0 0 100%;
-  }
-
-  .actions {
-    flex-direction: column;
-    gap: 6px;
+  .item-desc-btn {
+    padding: 6px;
+    font-size: 0.9rem;
   }
 
   .add-btn, .remove-btn {
-    padding: 10px;
+    padding: 7px 10px;
     font-size: 0.75rem;
-    min-width: unset;
+    min-width: 65px;
+  }
+
+  .actions {
+    gap: 6px;
+  }
+
+  .table-footer {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .table-footer p {
+    font-size: 0.85rem;
   }
 
   .create-order-btn {

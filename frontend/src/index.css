@@ -29,13 +29,13 @@ button {
 
 button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 255, 200, 0.4);
+  box-shadow: 0 8px 20px rgba(255, 0, 110, 0.4);
 }
 
 input, select, textarea {
   font-family: 'Poppins', sans-serif;
   padding: 12px 15px;
-  border: 2px solid rgba(0, 255, 200, 0.2);
+  border: 2px solid rgba(255, 0, 110, 0.2);
   border-radius: 8px;
   font-size: 14px;
   background: rgba(255, 255, 255, 0.05);
@@ -45,8 +45,8 @@ input, select, textarea {
 
 input:focus, select:focus, textarea:focus {
   outline: none;
-  border-color: #00ffc8;
-  box-shadow: 0 0 20px rgba(0, 255, 200, 0.6), inset 0 0 10px rgba(0, 255, 200, 0.1);
+  border-color: #FF006E;
+  box-shadow: 0 0 20px rgba(255, 0, 110, 0.6), inset 0 0 10px rgba(255, 0, 110, 0.1);
   background: rgba(255, 255, 255, 0.08);
 }
 
@@ -61,15 +61,15 @@ table {
 }
 
 th {
-  background: linear-gradient(135deg, #00ffc8 0%, #00d4ff 100%);
+  background: linear-gradient(135deg, #FF006E 0%, #FF1493 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: #00ffc8;
+  color: #FF006E;
   padding: 15px;
   text-align: left;
   font-weight: 700;
-  border-bottom: 2px solid rgba(0, 255, 200, 0.3);
+  border-bottom: 2px solid rgba(255, 0, 110, 0.3);
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 12px;
@@ -77,12 +77,12 @@ th {
 
 td {
   padding: 12px 15px;
-  border-bottom: 1px solid rgba(0, 255, 200, 0.1);
+  border-bottom: 1px solid rgba(255, 0, 110, 0.1);
   color: #d0d0d0;
 }
 
 tr:hover {
-  background-color: rgba(0, 255, 200, 0.08);
+  background-color: rgba(255, 0, 110, 0.08);
 }
 
 .success-message {
@@ -111,7 +111,7 @@ tr:hover {
   text-align: center;
   padding: 40px;
   font-size: 16px;
-  color: #00ffc8;
+  color: #FF006E;
   font-weight: 600;
   animation: pulse 1.5s infinite;
 }
@@ -127,7 +127,7 @@ tr:hover {
   background: rgba(255, 255, 255, 0.02);
   border-radius: 12px;
   color: #888;
-  border: 2px dashed rgba(0, 255, 200, 0.2);
+  border: 2px dashed rgba(255, 0, 110, 0.2);
 }
 
 /* Mobile Responsive Styles */

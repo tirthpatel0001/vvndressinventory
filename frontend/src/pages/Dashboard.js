@@ -1,6 +1,3 @@
-// Dashboard Page - Excel Format
-// Displays inventory items in Excel format (sr no., section, item desc, item type, color, qty)
-
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ExcelInventoryTable from '../components/ExcelInventoryTable';
@@ -15,31 +12,46 @@ function Dashboard() {
   const [successMessage, setSuccessMessage] = useState('');
   const navigate = useNavigate();
 
-  // Check authentication
+  // 🔐 Check authentication
   useEffect(() => {
     if (!localStorage.getItem('isAuthenticated')) {
       navigate('/');
     }
   }, [navigate]);
 
-  // Fetch inventory on component mount
+  // 🚀 Fetch inventory on load
   useEffect(() => {
     fetchInventory();
   }, []);
 
+  // 🔥 FIXED FUNCTION
   const fetchInventory = async () => {
     try {
       setLoading(true);
+
+      console.log("📡 Calling API...");
+
       const response = await inventoryAPI.getAll();
-      setInventory(response.data);
+
+      console.log("✅ API RESPONSE:", response);
+      console.log("✅ DATA:", response.data);
+
+      if (response && response.data && Array.isArray(response.data)) {
+        setInventory([...response.data]); // force update
+      } else {
+        console.log("❌ Invalid data format");
+        setInventory([]);
+      }
+
     } catch (error) {
-      console.error('Error fetching inventory:', error);
+      console.error('❌ Error fetching inventory:', error);
       alert('Failed to load inventory');
     } finally {
       setLoading(false);
     }
   };
 
+  // ➕ Add item
   const handleAddItem = async (itemData) => {
     try {
       await inventoryAPI.create(itemData);
@@ -53,6 +65,7 @@ function Dashboard() {
     }
   };
 
+  // 🚪 Logout
   const handleLogout = () => {
     localStorage.removeItem('isAuthenticated');
     navigate('/');
@@ -97,7 +110,9 @@ function Dashboard() {
 
         {/* Inventory Table */}
         {loading ? (
-          <div className="loading">Loading inventory...</div>
+          <div className="loading">
+            Loading inventory... (wait 20–30 sec first time)
+          </div>
         ) : inventory.length === 0 ? (
           <div className="empty-state">
             <p>No inventory items yet. Add your first dress!</p>

@@ -1,38 +1,44 @@
-/* Dashboard Page - Dark Mode with Neon Accents */
+/* ============================================
+   DASHBOARD PAGE - Professional Dark Theme
+   Color Palette: Blue (#00d4ff) | Cyan (#00ffc8) | Lime (#00ff64) | Pink (#ff0066)
+   ============================================ */
 
 .dashboard-container {
   min-height: 100vh;
-  background: linear-gradient(135deg, #0a0e27 0%, #1a1a3e 100%);
+  background: rgba(0, 0, 0, 0.9);
   background-attachment: fixed;
 }
 
 .dashboard-header {
-  background: linear-gradient(135deg, #ff00ff 0%, #00d4ff 100%);
-  color: white;
+  background: linear-gradient(90deg, #00d4ff 0%, #00ffc8 100%);
+  color: #0a0e27;
   padding: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 0 40px rgba(255, 0, 255, 0.5), 0 0 60px rgba(0, 212, 255, 0.3);
+  box-shadow: 0 0 60px rgba(0, 212, 255, 0.7), 0 0 40px rgba(0, 255, 200, 0.5);
   flex-wrap: wrap;
-  gap: 20px;
-  border-bottom: 3px solid #00ffc8;
+  gap: 30px;
+  border-bottom: 4px solid #00ff64;
 }
 
 .dashboard-header h1 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   margin: 0;
-  font-weight: 800;
-  text-shadow: 0 0 20px rgba(0, 212, 255, 0.8);
-  letter-spacing: 1px;
+  font-weight: 900;
+  letter-spacing: 2px;
   font-family: 'Poppins', sans-serif;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: #0a0e27;
 }
 
 .dashboard-header p {
   font-size: 1.1rem;
   opacity: 0.95;
-  font-weight: 500;
-  letter-spacing: 0.5px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  font-family: 'Poppins', sans-serif;
+  color: #0a0e27;
 }
 
 .header-buttons {
@@ -40,135 +46,238 @@
   gap: 15px;
 }
 
-.nav-btn, .logout-btn {
-  padding: 12px 28px;
+.nav-btn,
+.logout-btn {
+  padding: 14px 32px;
   border-radius: 8px;
-  font-weight: 700;
+  font-weight: 800;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.35s ease;
   font-size: 1rem;
   border: 2px solid;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
   font-family: 'Poppins', sans-serif;
 }
 
 .nav-btn {
-  background: transparent;
+  background: rgba(0, 0, 0, 0.3);
   color: #00ffc8;
   border-color: #00ffc8;
-  box-shadow: 0 0 15px rgba(0, 255, 200, 0.3);
+  box-shadow: 0 0 25px rgba(0, 255, 200, 0.5);
 }
 
 .nav-btn:hover {
   background: #00ffc8;
   color: #0a0e27;
-  transform: translateY(-3px);
-  box-shadow: 0 0 30px rgba(0, 255, 200, 0.8), inset 0 0 10px rgba(0, 255, 200, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 0 50px rgba(0, 255, 200, 1), inset 0 0 20px rgba(0, 255, 200, 0.3);
 }
 
 .logout-btn {
-  background: linear-gradient(135deg, #ff0080 0%, #ff3366 100%);
+  background: linear-gradient(135deg, #ff4444 0%, #cc0000 100%);
   color: white;
-  border-color: #ff0080;
-  box-shadow: 0 0 20px rgba(255, 0, 128, 0.5);
+  border-color: #ff4444;
+  box-shadow: 0 0 25px rgba(255, 68, 68, 0.6);
 }
 
 .logout-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 40px rgba(255, 0, 128, 0.8);
+  transform: translateY(-4px);
+  box-shadow: 0 0 50px rgba(255, 68, 68, 1);
 }
 
 .dashboard-content {
   max-width: 1400px;
   margin: 40px auto;
-  padding: 0 20px;
+  padding: 0 30px;
 }
 
 .success-message {
   background: linear-gradient(135deg, rgba(0, 255, 100, 0.15), rgba(0, 200, 100, 0.1));
   border: 2px solid #00ff64;
   color: #00ff64;
-  padding: 18px 20px;
-  border-radius: 10px;
-  margin-bottom: 25px;
-  font-weight: 600;
-  box-shadow: 0 0 30px rgba(0, 255, 100, 0.4);
+  padding: 20px 24px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  box-shadow: 0 0 40px rgba(0, 255, 100, 0.5);
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.8px;
   font-family: 'Poppins', sans-serif;
 }
 
 .form-section {
-  margin-bottom: 35px;
+  margin-bottom: 40px;
 }
 
 .toggle-form-btn {
   background: linear-gradient(135deg, #00ffc8 0%, #00d4ff 100%);
   color: #0a0e27;
-  padding: 14px 32px;
+  padding: 16px 36px;
   border: none;
   border-radius: 10px;
-  font-weight: 800;
-  font-size: 1.1rem;
-  margin-bottom: 20px;
+  font-weight: 900;
+  font-size: 1.2rem;
+  margin-bottom: 25px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 30px rgba(0, 255, 200, 0.6);
+  transition: all 0.35s ease;
+  box-shadow: 0 0 40px rgba(0, 255, 200, 0.7);
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   font-family: 'Poppins', sans-serif;
 }
 
 .toggle-form-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 50px rgba(0, 255, 200, 1);
+  transform: translateY(-4px);
+  box-shadow: 0 0 70px rgba(0, 255, 200, 1), 0 0 40px rgba(0, 212, 255, 0.8);
 }
 
 .loading {
   text-align: center;
-  padding: 60px 20px;
-  font-size: 1.2rem;
-  background: rgba(255, 255, 255, 0.05);
+  padding: 80px 30px;
+  font-size: 1.3rem;
+  background: linear-gradient(135deg, rgba(0, 255, 200, 0.05), rgba(0, 212, 255, 0.03));
   border-radius: 15px;
   color: #00ffc8;
-  font-weight: 600;
+  font-weight: 700;
   border: 2px solid rgba(0, 255, 200, 0.3);
-  animation: pulse 1.5s infinite;
+  animation: pulse 2s infinite;
+  font-family: 'Poppins', sans-serif;
 }
 
 .empty-state {
   text-align: center;
-  padding: 80px 20px;
-  background: rgba(255, 255, 255, 0.02);
+  padding: 100px 30px;
+  background: linear-gradient(135deg, rgba(0, 255, 200, 0.05), rgba(0, 212, 255, 0.03));
   border-radius: 15px;
   color: #888;
-  border: 2px dashed rgba(0, 255, 200, 0.2);
+  border: 2px dashed rgba(0, 255, 200, 0.3);
+  font-family: 'Poppins', sans-serif;
 }
 
 .empty-state p {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   margin: 0;
+  font-weight: 600;
 }
 
 @media (max-width: 768px) {
+  .dashboard-container {
+    min-height: auto;
+  }
+
   .dashboard-header {
-    padding: 30px;
+    padding: 25px 20px;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+  }
+
+  .dashboard-header p {
+    font-size: 1rem;
   }
 
   .header-buttons {
     width: 100%;
     flex-direction: column;
+    gap: 10px;
   }
 
-  .nav-btn, .logout-btn {
+  .nav-btn,
+  .logout-btn {
     width: 100%;
     text-align: center;
+    padding: 12px 20px;
+    font-size: 0.95rem;
+  }
+
+  .dashboard-content {
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 0 15px;
+  }
+
+  .toggle-form-btn {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .form-section {
+    margin-bottom: 25px;
+  }
+
+  .success-message {
+    padding: 15px 20px;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+
+  .empty-state {
+    padding: 60px 20px;
+  }
+
+  .loading {
+    padding: 50px 20px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-header {
+    padding: 18px 15px;
+    gap: 12px;
   }
 
   .dashboard-header h1 {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
+  }
+
+  .dashboard-header p {
+    font-size: 0.9rem;
+  }
+
+  .nav-btn,
+  .logout-btn {
+    padding: 10px 15px;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    border: 1px solid;
+  }
+
+  .dashboard-content {
+    padding: 0 12px;
+    margin: 15px auto;
+  }
+
+  .toggle-form-btn {
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+  }
+
+  .success-message {
+    padding: 12px 15px;
+    font-size: 0.85rem;
+  }
+
+  .empty-state {
+    padding: 40px 15px;
+  }
+
+  .empty-state p {
+    font-size: 1.1rem;
+  }
+
+  .loading {
+    padding: 40px 15px;
+    font-size: 1rem;
   }
 }

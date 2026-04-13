@@ -3,11 +3,14 @@
 
 import React, { useState } from 'react';
 import { inventoryAPI } from '../api';
+import ItemDetailsModal from './ItemDetailsModal';
 import '../styles/ExcelInventoryTable.css';
 
 function ExcelInventoryTable({ inventory, onRefresh, onNavigateToOrders }) {
   const [searchTerm, setSearchTerm] = useState('');
   const [actionLoading, setActionLoading] = useState(null);
+  const [selectedItem, setSelectedItem] = useState(null);
+  const [modalOpen, setModalOpen] = useState(false);
 
   // Filter inventory based on search
   const filteredInventory = inventory.filter(item => {
@@ -27,6 +30,7 @@ function ExcelInventoryTable({ inventory, onRefresh, onNavigateToOrders }) {
         const item = inventory.find(i => i._id === itemId);
         await inventoryAPI.update(itemId, { quantity: item.quantity + parseInt(qty) });
         onRefresh();
+        setModalOpen(false);
       } catch (error) {
         alert('Failed to add quantity');
       } finally {
@@ -44,12 +48,23 @@ function ExcelInventoryTable({ inventory, onRefresh, onNavigateToOrders }) {
         const newQty = Math.max(0, item.quantity - parseInt(qty));
         await inventoryAPI.update(itemId, { quantity: newQty });
         onRefresh();
+        setModalOpen(false);
       } catch (error) {
         alert('Failed to remove quantity');
       } finally {
         setActionLoading(null);
       }
     }
+  };
+
+  const openItemDetails = (item) => {
+    setSelectedItem(item);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setSelectedItem(null);
   };
 
   return (
@@ -88,7 +103,15 @@ function ExcelInventoryTable({ inventory, onRefresh, onNavigateToOrders }) {
             <tr key={item._id} className={item.quantity <= 5 ? 'low-stock' : ''}>
               <td className="sr-no">{index + 1}</td>
               <td className="section">{item.section}</td>
-              <td className="item-desc"><strong>{item.name}</strong></td>
+              <td className="item-desc">
+                <button 
+                  className="item-desc-btn"
+                  onClick={() => openItemDetails(item)}
+                  title="Click to view details"
+                >
+                  <strong>{item.name}</strong>
+                </button>
+              </td>
               <td className="item-type">{item.category}</td>
               <td className="color">{item.color}</td>
               <td className="qty-cell">{item.quantity}</td>
@@ -122,6 +145,15 @@ function ExcelInventoryTable({ inventory, onRefresh, onNavigateToOrders }) {
           📋 Create Order
         </button>
       </div>
+
+      <ItemDetailsModal
+        item={selectedItem}
+        isOpen={modalOpen}
+        onClose={closeModal}
+        onAddQuantity={handleAddQuantity}
+        onRemoveQuantity={handleRemoveQuantity}
+        isLoading={actionLoading === selectedItem?._id}
+      />
     </div>
   );
 }

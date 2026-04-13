@@ -1,10 +1,12 @@
 /* Inventory Table Component Styles */
 
 .inventory-table-container {
-  background-color: white;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
   padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 0 40px rgba(0, 212, 255, 0.2), inset 0 0 20px rgba(0, 212, 255, 0.05);
+  border: 2px solid rgba(0, 212, 255, 0.3);
 }
 
 .table-header {
@@ -17,21 +19,26 @@
 }
 
 .table-header h2 {
-  color: #333;
+  color: #00ffc8;
   font-size: 22px;
+  font-weight: 800;
 }
 
 .refresh-btn {
-  background-color: #6c757d;
-  color: white;
+  background: rgba(0, 212, 255, 0.2);
+  border: 2px solid #00ffc8;
+  color: #00ffc8;
   padding: 10px 20px;
-  border-radius: 6px;
-  font-weight: 600;
+  border-radius: 8px;
+  font-weight: 700;
   transition: all 0.3s;
+  box-shadow: 0 0 15px rgba(0, 255, 200, 0.3);
 }
 
 .refresh-btn:hover {
-  background-color: #5a6268;
+  background: #00ffc8;
+  color: #0a0e27;
+  box-shadow: 0 0 30px rgba(0, 255, 200, 0.8);
 }
 
 .inventory-table {
@@ -41,19 +48,23 @@
 }
 
 .inventory-table thead {
-  background-color: #007bff;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(0, 255, 200, 0.1));
 }
 
 .inventory-table th {
-  color: white;
+  color: #00ffc8;
   padding: 15px;
   text-align: left;
-  font-weight: 600;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  background: rgba(0, 255, 200, 0.05);
 }
 
 .inventory-table td {
   padding: 15px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid rgba(0, 255, 200, 0.1);
+  color: #d0d0d0;
 }
 
 .inventory-table tbody tr {
@@ -61,7 +72,7 @@
 }
 
 .inventory-table tbody tr:hover {
-  background-color: #f9f9f9;
+  background-color: rgba(0, 255, 200, 0.08);
 }
 
 .inventory-table tbody tr.low-stock {
@@ -122,16 +133,18 @@
 }
 
 .create-order-btn {
-  background-color: #ffc107;
-  color: #333;
+  background: linear-gradient(135deg, #ffa500 0%, #ff8c00 100%);
+  color: #fff;
   padding: 10px 20px;
-  border-radius: 6px;
-  font-weight: 600;
+  border-radius: 8px;
+  font-weight: 700;
   transition: all 0.3s;
+  box-shadow: 0 0 20px rgba(255, 165, 0, 0.5);
 }
 
 .create-order-btn:hover {
-  background-color: #ffb800;
+  box-shadow: 0 0 40px rgba(255, 165, 0, 0.8);
+  transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {

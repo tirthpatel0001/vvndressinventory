@@ -1,4 +1,4 @@
-/* Excel Inventory Table - Dark Mode with Neon */
+/* Inventory Table - Professional Dark Theme */
 
 .inventory-table-container {
   background: rgba(255, 255, 255, 0.03);
@@ -17,7 +17,7 @@
   padding: 30px;
   background: linear-gradient(135deg, #00d4ff 0%, #00ffc8 100%);
   color: #0a0e27;
-  border-bottom: 3px solid #ff00ff;
+  border-bottom: 3px solid #00ff64;
 }
 
 .table-header h2 {
@@ -120,47 +120,69 @@
   transform: scale(1.01);
 }
 
-.inventory-table tbody tr.low-stock {
-  background-color: rgba(255, 193, 7, 0.2);
-}
-
-/* Column Styles */
 .sr-no {
   font-weight: bold;
   text-align: center;
   width: 60px;
-  background: rgba(102, 126, 234, 0.08);
+  background: rgba(0, 255, 200, 0.05);
+  color: #00ffc8;
 }
 
 .section {
   text-align: center;
-  font-weight: 600;
-  background: rgba(102, 126, 234, 0.08);
-  color: #667eea;
+  font-weight: 700;
+  background: rgba(0, 212, 255, 0.05);
+  color: #00d4ff;
 }
 
 .item-desc {
   min-width: 200px;
-  color: #667eea;
+  color: #e0e0e0;
   font-weight: 600;
+  padding: 0;
+}
+
+.item-desc-btn {
+  background: none;
+  border: none;
+  color: #00ffc8;
+  cursor: pointer;
+  font-weight: 700;
+  text-align: left;
+  padding: 12px 15px;
+  width: 100%;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: underline;
+  text-decoration-color: #00ffc8;
+  text-underline-offset: 3px;
+}
+
+.item-desc-btn:hover {
+  text-decoration-thickness: 2px;
+  color: #00d4ff;
+  text-decoration-color: #00d4ff;
+  text-shadow: 0 0 10px rgba(0, 255, 200, 0.5);
 }
 
 .item-type {
   text-transform: capitalize;
   font-weight: 500;
+  color: #d0d0d0;
 }
 
 .color {
   text-transform: capitalize;
   font-weight: 500;
-  color: #6c757d;
+  color: #d0d0d0;
 }
 
 .qty-cell {
   text-align: center;
-  font-weight: bold;
+  font-weight: 800;
   font-size: 1.1rem;
-  color: #667eea;
+  color: #00ff64;
 }
 
 /* Action Buttons */
@@ -285,22 +307,214 @@
 }
 
 @media (max-width: 768px) {
-  .table-footer {
+  .inventory-table-container {
+    border-radius: 10px;
+    margin: 15px 0;
+  }
+
+  .table-header {
+    padding: 20px;
     flex-direction: column;
-    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .table-header h2 {
+    font-size: 1.5rem;
+    width: 100%;
+  }
+
+  .refresh-btn {
+    width: 100%;
+  }
+
+  .search-section {
+    padding: 15px;
+  }
+
+  .search-input {
+    font-size: 16px;
+    padding: 12px;
   }
 
   .inventory-table {
     font-size: 0.85rem;
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .inventory-table thead {
+    display: block;
+  }
+
+  .inventory-table th {
+    padding: 12px 10px;
+    font-size: 0.75rem;
+    border-bottom: 2px solid #00ffc8;
+    word-break: break-word;
+  }
+
+  .inventory-table tbody {
+    display: block;
+  }
+
+  .inventory-table tbody tr {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 2px solid rgba(0, 255, 200, 0.2);
+    margin-bottom: 10px;
+    padding: 10px;
+    background: rgba(0, 255, 200, 0.02);
+  }
+
+  .inventory-table tbody tr:hover {
+    background-color: rgba(0, 255, 200, 0.08);
+    transform: none;
+  }
+
+  .inventory-table td {
+    flex: 0 0 100%;
+    padding: 8px 0;
+    border-bottom: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .inventory-table td::before {
+    content: attr(data-label);
+    font-weight: 700;
+    color: #00ffc8;
+    margin-right: 10px;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.5px;
+    flex-basis: 35%;
+  }
+
+  .sr-no {
+    flex: 0 0 100%;
+    text-align: center;
+    background: rgba(0, 255, 200, 0.1);
+    padding: 8px !important;
+    font-size: 1rem;
+  }
+
+  .sr-no::before {
+    content: none;
+  }
+
+  .section {
+    flex: 0 0 100%;
+    text-align: left;
+  }
+
+  .item-desc {
+    flex: 0 0 100%;
+  }
+
+  .item-desc-btn {
+    padding: 8px 0;
+    width: 100%;
+    text-decoration-thickness: 1px;
+  }
+
+  .item-type {
+    flex: 0 0 50%;
+  }
+
+  .color {
+    flex: 0 0 50%;
+  }
+
+  .qty-cell {
+    flex: 0 0 100%;
+    justify-content: flex-start;
+  }
+
+  .actions {
+    flex: 0 0 100%;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 8px;
+  }
+
+  .add-btn, .remove-btn {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    flex: 1;
+    min-width: 80px;
+  }
+
+  .table-footer {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 15px;
+    gap: 12px;
+  }
+
+  .table-footer p {
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  .create-order-btn {
+    width: 100%;
+    padding: 12px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .table-header {
+    padding: 15px;
+  }
+
+  .table-header h2 {
+    font-size: 1.3rem;
+  }
+
+  .inventory-table th {
+    padding: 10px 8px;
+    font-size: 0.65rem;
+  }
+
+  .inventory-table tbody tr {
+    padding: 8px;
+    margin-bottom: 8px;
+  }
+
+  .inventory-table td {
+    font-size: 0.85rem;
+  }
+
+  .inventory-table td::before {
+    font-size: 0.65rem;
+    flex-basis: 40%;
+  }
+
+  .item-type {
+    flex: 0 0 100%;
+  }
+
+  .color {
+    flex: 0 0 100%;
   }
 
   .actions {
     flex-direction: column;
-    gap: 4px;
+    gap: 6px;
   }
 
   .add-btn, .remove-btn {
-    padding: 6px 10px;
+    padding: 10px;
     font-size: 0.75rem;
+    min-width: unset;
+  }
+
+  .create-order-btn {
+    padding: 10px 14px;
+    font-size: 0.9rem;
   }
 }
+

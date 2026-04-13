@@ -1,37 +1,43 @@
-/* Orders Page - Dark Mode with Neon */
+/* ============================================
+   ORDERS PAGE - Professional Dark Theme
+   ============================================ */
 
 .orders-container {
   min-height: 100vh;
-  background: linear-gradient(135deg, #0a0e27 0%, #1a1a3e 100%);
+  background: rgba(0, 0, 0, 0.9);
   background-attachment: fixed;
 }
 
 .orders-header {
-  background: linear-gradient(135deg, #00d4ff 0%, #00ffc8 100%);
+  background: linear-gradient(90deg, #00d4ff 0%, #00ffc8 100%);
   color: #0a0e27;
   padding: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 0 40px rgba(0, 255, 200, 0.5), 0 0 60px rgba(0, 212, 255, 0.3);
+  box-shadow: 0 0 60px rgba(0, 212, 255, 0.7), 0 0 40px rgba(0, 255, 200, 0.5);
   flex-wrap: wrap;
-  gap: 20px;
-  border-bottom: 3px solid #ff00ff;
+  gap: 30px;
+  border-bottom: 4px solid #00ff64;
 }
 
 .orders-header h1 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   margin: 0;
-  font-weight: 800;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  letter-spacing: 1px;
+  font-weight: 900;
+  letter-spacing: 2px;
   font-family: 'Poppins', sans-serif;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: #0a0e27;
 }
 
 .orders-header p {
-  font-size: 1rem;
+  font-size: 1.1rem;
   opacity: 0.95;
-  font-weight: 500;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  font-family: 'Poppins', sans-serif;
+  color: #0a0e27;
 }
 
 .header-buttons {
@@ -53,29 +59,29 @@
 }
 
 .nav-btn {
-  background: transparent;
-  color: #0a0e27;
-  border-color: #0a0e27;
-  box-shadow: 0 0 15px rgba(10, 14, 39, 0.3);
+  background: rgba(0, 0, 0, 0.3);
+  color: #00ffc8;
+  border-color: #00ffc8;
+  box-shadow: 0 0 15px rgba(0, 255, 200, 0.3);
 }
 
 .nav-btn:hover {
-  background: #0a0e27;
-  color: #00ffc8;
+  background: #00ffc8;
+  color: #0a0e27;
   transform: translateY(-3px);
   box-shadow: 0 0 30px rgba(0, 255, 200, 0.8);
 }
 
 .logout-btn {
-  background: linear-gradient(135deg, #ff0080 0%, #ff3366 100%);
+  background: linear-gradient(135deg, #ff4444 0%, #cc0000 100%);
   color: white;
-  border-color: #ff0080;
-  box-shadow: 0 0 20px rgba(255, 0, 128, 0.5);
+  border-color: #ff4444;
+  box-shadow: 0 0 20px rgba(255, 68, 68, 0.5);
 }
 
 .logout-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 0 40px rgba(255, 0, 128, 0.8);
+  box-shadow: 0 0 40px rgba(255, 68, 68, 0.8);
 }
 
 .orders-content {
@@ -156,7 +162,7 @@
 }
 
 .orders-list h2 {
-  background: linear-gradient(135deg, #00ffc8 0%, #00d4ff 100%);
+  background: linear-gradient(135deg, #ffa500 0%, #00ffc8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -304,48 +310,192 @@
 }
 
 .return-btn {
-  background: linear-gradient(135deg, #ff6600 0%, #ff9900 100%);
-  color: white;
+  background: linear-gradient(135deg, #00d4ff 0%, #00ffc8 100%);
+  color: #0a0e27;
   border: none;
   padding: 10px 20px;
   border-radius: 6px;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 0 20px rgba(255, 102, 0, 0.4);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
 }
 
 .return-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 0 35px rgba(255, 102, 0, 0.7);
+  box-shadow: 0 0 35px rgba(0, 212, 255, 0.7);
 }
 
 @media (max-width: 768px) {
+  .orders-container {
+    min-height: auto;
+  }
+
   .orders-header {
-    padding: 25px;
+    padding: 20px;
     flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .header-buttons {
-    width: 100%;
-    flex-direction: column;
-  }
-
-  .nav-btn, .logout-btn {
-    width: 100%;
-    text-align: center;
+    align-items: stretch;
+    gap: 12px;
   }
 
   .orders-header h1 {
     font-size: 1.5rem;
   }
 
+  .orders-header p {
+    font-size: 0.95rem;
+  }
+
+  .header-buttons {
+    width: 100%;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .nav-btn, .logout-btn {
+    width: 100%;
+    text-align: center;
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+
+  .orders-content {
+    max-width: 100%;
+    padding: 0 15px;
+    margin: 20px auto;
+  }
+
+  .toggle-form-btn {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 0.95rem;
+  }
+
+  .orders-list {
+    padding: 20px;
+  }
+
+  .orders-list h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .order-card {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
   .order-header {
     flex-direction: column;
+    gap: 10px;
   }
 
   .order-header > div:last-child {
     width: 100%;
+  }
+
+  .order-details {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .order-details > div {
+    width: 100%;
+  }
+
+  .order-items {
+    font-size: 0.85rem;
+  }
+
+  .order-actions {
+    flex-direction: column;
+  }
+
+  .return-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .orders-header {
+    padding: 15px;
+  }
+
+  .orders-header h1 {
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+  }
+
+  .orders-header p {
+    font-size: 0.85rem;
+  }
+
+  .nav-btn, .logout-btn {
+    padding: 9px 14px;
+    font-size: 0.8rem;
+    border: 1px solid;
+  }
+
+  .orders-content {
+    padding: 0 10px;
+    margin: 15px auto;
+  }
+
+  .toggle-form-btn {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+
+  .success-message {
+    padding: 10px 15px;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+  }
+
+  .orders-list {
+    padding: 15px;
+  }
+
+  .orders-list h2 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+
+  .order-card {
+    padding: 12px;
+    margin-bottom: 12px;
+  }
+
+  .order-header {
+    flex-direction: column;
+  }
+
+  .order-status {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+
+  .order-items {
+    font-size: 0.8rem;
+  }
+
+  .order-actions {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .return-btn {
+    width: 100%;
+    padding: 9px 15px;
+    font-size: 0.8rem;
+  }
+
+  .loading {
+    padding: 40px 15px;
+    font-size: 1rem;
+  }
+
+  .empty-state {
+    padding: 40px 15px;
   }
 }

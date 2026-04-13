@@ -68,7 +68,7 @@ npm start
 Connecting to MongoDB...
 URI: mongodb+srv://...
 ✅ MongoDB connected successfully!
-🚀 Server running on http://localhost:5000
+🚀 Server running on https://vvndressinventory.onrender.com
 ```
 
 **✅ Backend is Ready!** (Keep this terminal running)
@@ -316,15 +316,15 @@ npm test
 Verify everything is working:
 
 1. **Backend Health:**
-   - Visit: http://localhost:5000/api/health
+   - Visit: https://vvndressinventory.onrender.com/api/health
    - Should see: `{"message":"Server is running!"}`
 
 2. **Fetch All Inventory:**
-   - Visit: http://localhost:5000/api/inventory
+   - Visit: https://vvndressinventory.onrender.com/api/inventory
    - Should see JSON array of items
 
 3. **Fetch All Orders:**
-   - Visit: http://localhost:5000/api/orders
+   - Visit: https://vvndressinventory.onrender.com/api/orders
    - Should see JSON array of orders
 
 ---

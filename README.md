@@ -92,12 +92,12 @@ npm install
 npm start
 ```
 
-Server will run on `http://localhost:5000`
+Server will run on `https://vvndressinventory.onrender.com`
 
 **Expected Output:**
 ```
 ✅ MongoDB connected successfully!
-🚀 Server running on http://localhost:5000
+🚀 Server running on https://vvndressinventory.onrender.com
 ```
 
 ### 3. **Setup Frontend**
@@ -230,7 +230,7 @@ Add some sample items to test:
 ### Frontend not connecting to backend
 - Verify backend is running on port 5000
 - Check CORS is enabled in backend
-- Browser console should show API calls to `http://localhost:5000/api`
+- Browser console should show API calls to `https://vvndressinventory.onrender.com/api`
 
 ### Port already in use
 - **For port 5000 (Backend):** 

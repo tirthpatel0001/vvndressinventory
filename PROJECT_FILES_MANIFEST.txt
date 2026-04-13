@@ -131,7 +131,7 @@ INVENTORY_VIEWER.html             Visual inventory data table
 ✅ MongoDB Connection:      CONFIGURED (Password set)
 ✅ Backend Server Port:     5000 (Ready)
 ✅ Frontend Server Port:    3000 (Ready)
-✅ API Base URL:           http://localhost:5000/api
+✅ API Base URL:           https://vvndressinventory.onrender.com/api
 ✅ CORS Enabled:           Yes
 ✅ Environment Variables:   Configured
 ✅ Authentication:          Hardcoded (admin123/admin123)
@@ -166,8 +166,8 @@ INVENTORY_VIEWER.html             Visual inventory data table
 
 📥 View in Browser:
   Dashboard:      http://localhost:3000
-  API Health:     http://localhost:5000/api/health
-  Inventory API:  http://localhost:5000/api/inventory
+  API Health:     https://vvndressinventory.onrender.com/api/health
+  Inventory API:  https://vvndressinventory.onrender.com/api/inventory
 
 🔄 Re-import Data:
   python import_excel_inventory.py

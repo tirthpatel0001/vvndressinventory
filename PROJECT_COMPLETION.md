@@ -322,7 +322,7 @@ Password: admin123
 
 | Service | URL | Port |
 |---------|-----|------|
-| Backend API | http://localhost:5000 | 5000 |
+| Backend API | https://vvndressinventory.onrender.com | 5000 |
 | Frontend App | http://localhost:3000 | 3000 |
 | MongoDB | Remote (Atlas) | - |
 

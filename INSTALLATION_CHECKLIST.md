@@ -19,7 +19,7 @@
 - [ ] `backend/routes/orderRoutes.js` created
 - [ ] `npm install` completed in backend
 - [ ] Backend runs on port 5000
-- [ ] API health check works at http://localhost:5000/api/health
+- [ ] API health check works at https://vvndressinventory.onrender.com/api/health
 
 ## Frontend Setup ✅
 - [ ] `frontend/package.json` created

@@ -208,13 +208,13 @@ Your data is now accessible via REST APIs:
 
 ### View Inventory:
 ```
-GET http://localhost:5000/api/inventory
+GET https://vvndressinventory.onrender.com/api/inventory
 ```
 Returns all 62 items in JSON format
 
 ### Create Order:
 ```
-POST http://localhost:5000/api/orders
+POST https://vvndressinventory.onrender.com/api/orders
 Body: {
   "items": [
     {
@@ -227,7 +227,7 @@ Body: {
 
 ### Get Orders:
 ```
-GET http://localhost:5000/api/orders
+GET https://vvndressinventory.onrender.com/api/orders
 ```
 Returns all created orders
 

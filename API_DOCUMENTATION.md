@@ -4,7 +4,7 @@ Complete API reference for the Dress Shop Inventory Management System
 
 ## Base URL
 ```
-http://localhost:5000/api
+https://vvndressinventory.onrender.com/api
 ```
 
 ---
@@ -506,12 +506,12 @@ PUT /api/orders/65a7c3b2d5e9f1a2b3c4d5f0/return
 
 ### Get All Inventory
 ```bash
-curl http://localhost:5000/api/inventory
+curl https://vvndressinventory.onrender.com/api/inventory
 ```
 
 ### Create Item
 ```bash
-curl -X POST http://localhost:5000/api/inventory \
+curl -X POST https://vvndressinventory.onrender.com/api/inventory \
   -H "Content-Type: application/json" \
   -d '{
     "name": "Summer Dress",
@@ -524,7 +524,7 @@ curl -X POST http://localhost:5000/api/inventory \
 
 ### Create Order
 ```bash
-curl -X POST http://localhost:5000/api/orders \
+curl -X POST https://vvndressinventory.onrender.com/api/orders \
   -H "Content-Type: application/json" \
   -d '{
     "items": [
@@ -535,7 +535,7 @@ curl -X POST http://localhost:5000/api/orders \
 
 ### Return Order
 ```bash
-curl -X PUT http://localhost:5000/api/orders/65a7c3b2d5e9f1a2b3c4d5f0/return \
+curl -X PUT https://vvndressinventory.onrender.com/api/orders/65a7c3b2d5e9f1a2b3c4d5f0/return \
   -H "Content-Type: application/json"
 ```
 
@@ -568,7 +568,7 @@ Currently, no rate limiting is implemented. In production, add:
 ### Axios Configuration (in `frontend/src/api.js`)
 
 ```javascript
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = 'https://vvndressinventory.onrender.com/api';
 
 export const inventoryAPI = {
   getAll: () => api.get('/inventory'),

@@ -36,7 +36,7 @@ Password: admin123
 
 ## ✅ Verification Checklist
 
-- [ ] Backend running on http://localhost:5000
+- [ ] Backend running on https://vvndressinventory.onrender.com
 - [ ] Frontend running on http://localhost:3000
 - [ ] MongoDB connected (check + in backend console)
 - [ ] Login works with admin123 / admin123
@@ -59,7 +59,7 @@ Password: admin123
 ## 📞 API Health Check
 
 Open browser and visit:
-- Backend Health: http://localhost:5000/api/health
+- Backend Health: https://vvndressinventory.onrender.com/api/health
 - Should show: `{"message":"Server is running!"}`
 
 ---
